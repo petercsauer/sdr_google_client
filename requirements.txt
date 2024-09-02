@@ -1,0 +1,7 @@
+# pyaudio
+# google-cloud-translate
+# google-cloud-speech
+# google-cloud-storage
+# google-cloud-pubsub
+# Flask==2.0.3
+websocket-client
