@@ -5,3 +5,4 @@
 # google-cloud-pubsub
 # Flask==2.0.3
 websocket-client
+requests

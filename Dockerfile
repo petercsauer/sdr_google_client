@@ -26,6 +26,9 @@ COPY client.py .
 COPY credentials.json /root/.google/credentials.json
 ENV GOOGLE_APPLICATION_CREDENTIALS="/root/.google/credentials.json"
 
+USER root
+
+
 # Command to run the script
 # Command to run rtl_fm and pipe output to the Python script
-CMD ["bash", "-c", "rtl_fm -f 162.400M -M fm -s 24k -r 24k -g 35 - | tee >(aplay -D hw:2,0 -t raw -f S16_LE -r 24000 -c 1) | sox -t raw -r 24000 -e signed-integer -b 16 -c 1 - -t wav - | python3 client.py"]
+CMD ["bash", "-c",  "python3 client.py"]
